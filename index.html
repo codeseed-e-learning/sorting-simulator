@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Emulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-500">
+    <div class="container max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
+      <h1 class="text-2xl font-bold mb-6 text-center">Sorting Emulator</h1>
+      
+      <input
+        type="text"
+        placeholder="Enter array (e.g., 5,3,8,1)"
+        id="array"
+        class="border border-gray-300 p-2 rounded mb-4 w-full"
+      />
+      
+      <div class="flex justify-between mb-4">
+        <button
+          id="setarray"
+          class="bg-black text-white p-1 rounded hover:bg-blue-600 transition-colors duration-300"
+        >
+          Set Array
+        </button>
+        <select
+          id="sort-method"
+          class="border border-gray-300  rounded w-full max-w-xs"
+        >
+          <option value="bubble">Bubble Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <option value="quick">Quick Sort</option>
+          <option value="merge">Merge Sort</option>
+        </select>
+        <button
+          id="sort"
+          class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors duration-300"
+        >
+          Sort
+        </button>
+      </div>
+
+      <div
+        class="original-nums flex justify-start items-end mt-4 p-4 bg-gray-50 border border-gray-200 rounded h-64"
+        id="origin-numbers"
+      ></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
